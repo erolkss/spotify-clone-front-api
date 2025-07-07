@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLinkActive} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {FaIconComponent, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -8,6 +8,7 @@ import {FaIconComponent, FontAwesomeModule} from '@fortawesome/angular-fontaweso
     RouterLinkActive,
     FaIconComponent,
     FontAwesomeModule,
+    RouterLink,
   ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss'
