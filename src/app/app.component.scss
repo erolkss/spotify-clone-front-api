@@ -1,9 +1,19 @@
-@import "./../assets/scss/bootstrap-variables.scss";
+@use "./../assets/scss/bootstrap-variables.scss" as vars;
 
 .height-main-row {
-  height: $main-row-height;
+  height: vars.$main-row-height;
 }
 
 .full-height-main-content {
-  height: $main-content-height;
+  height: vars.$main-content-height;
+}
+
+
+.scroll-hidden {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
