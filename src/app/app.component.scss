@@ -8,7 +8,6 @@
   height: vars.$main-content-height;
 }
 
-
 .scroll-hidden {
   overflow: auto;
   scrollbar-width: none;
@@ -16,4 +15,9 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.toast-container {
+  bottom: 13%;
+  right: 35%;
 }
