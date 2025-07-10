@@ -1,0 +1,28 @@
+@use "../../../assets/scss/bootstrap-variables" as vars;
+
+.scroll-hidden {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.library-height {
+  height: vars.$library-height;
+}
+
+.library-songs {
+  overflow-y: scroll;
+}
+
+.library-song-card {
+  cursor: pointer;
+}
+
+.library-song-card:hover {
+  background-color: vars.$card-hover-background;
+  border-radius: vars.$card-border-radius;
+}
