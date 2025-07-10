@@ -20,7 +20,7 @@ export class AuthService {
 
 
   fetch(): void {
-    this.http.get<User>(`${environment.API_URL}/api/get-authenticated-user`)
+    this.http.get<User>("/api/get-authenticated-user")
       .subscribe({
         next: user => this.fetchUser$.set(State.Builder<User, HttpErrorResponse>().forSuccess(user).build()),
         error: (err: HttpErrorResponse) => {

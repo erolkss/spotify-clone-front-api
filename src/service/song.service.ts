@@ -2,7 +2,6 @@ import {computed, inject, Injectable, signal, WritableSignal} from '@angular/cor
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {State} from './model/state.model';
 import {ReadSong, SaveSong} from './model/song.model';
-import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +26,7 @@ export class SongService {
     clone.file = undefined;
     clone.cover = undefined;
     formData.append('dto', JSON.stringify(clone));
-    this.http.post<SaveSong>(`${environment.API_URL}/api/songs`, formData)
+    this.http.post<SaveSong>("/api/songs", formData)
       .subscribe({
         next: savedSong => this.add$.set(State.Builder<SaveSong, HttpErrorResponse>().forSuccess(savedSong).build()),
         error: err => this.add$.set(State.Builder<SaveSong, HttpErrorResponse>().forError(err).build())
@@ -39,7 +38,7 @@ export class SongService {
   }
 
   getAll(): void {
-    this.http.get<Array<ReadSong>>(`${environment.API_URL}/api/songs`)
+    this.http.get<Array<ReadSong>>("/api/songs")
       .subscribe({
         next: songs => this.getAll$.set(State.Builder<Array<ReadSong>, HttpErrorResponse>().forSuccess(songs).build()),
         error: err => this.getAll$.set(State.Builder<Array<ReadSong>, HttpErrorResponse>().forError(err).build())
