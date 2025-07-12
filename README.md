@@ -1,59 +1,41 @@
-# SpotifyCloneFront
+# Clone de Spotify (Fullstack) com Spring Boot 3.3.13, Angular 19, Bootstrap 5, PostgreSQL, Auth0 (2025) (Backend)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.14.
+## Tecnologias Usadas
+- **Spring Boot 3.3.13**
+- **Angular 19**
+- **Bootstrap 5**
+- **PostgreSQL**
+- **Auth0 (OAuth2)**
+- **Java 21+**
+- **Maven ou Gradle** (para gerenciamento de dependências)
+- **JPA / Hibernate** (para ORM)
+- **REST APIs**
+- **JWT (JSON Web Tokens)** (para autenticação e autorização)
+- **Docker** (opcional para containerização)
 
-## Development server
 
-To start a local development server, run:
+[Projeto Angular Frontend](https://github.com/erolkss/spotify-clone-front-api)
 
-```bash
-ng serve
-```
+### Funcionalidades Principais:
+- 🔐 Segurança com Auth0 (OAuth2)  
+- 🎶➕ Envio de Músicas  
+- 🎧 Transmissão de Áudio  
+- 🔍 Função de Pesquisa  
+- ❤️ Favoritos do Usuário  
+- 📱💻 Interface Responsiva com Bootstrap  
+- 🅰️ Últimos Recursos do Angular: Signal, Componente Independente, Nova Sintaxe de Fluxo de Controle
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Pré-requisitos
+- [NodeJS 20.19 LTS](https://nodejs.org/dist/v20.11.1/node-v20.11.1.pkg)
+- [Angular CLI v19](https://www.npmjs.com/package/@angular/cli)
+- IDE (WebStorm, IntelliJ)
 
-## Code scaffolding
+### Instalar dependências
+``npm install``
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Iniciar servidor de desenvolvimento
+Execute `ng serve --proxy-config proxy.conf.mjs` para iniciar o servidor de desenvolvimento. Acesse `http://localhost:4200/`.  
+A aplicação será recarregada automaticamente se você alterar qualquer um dos arquivos-fonte.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Build
+Execute `ng build` para compilar o projeto. Os artefatos da build serão armazenados no diretório `dist/`.
