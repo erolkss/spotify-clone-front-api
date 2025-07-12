@@ -20,7 +20,10 @@ export class HomeComponent {
 
   allSongs: Array<ReadSong> | undefined;
 
+  isLoading = false;
+
   constructor() {
+    this.isLoading = true;
     effect(() => {
       const allSongsResponse = this.songService.getAllSig();
       if (allSongsResponse.status === "OK") {
@@ -28,6 +31,7 @@ export class HomeComponent {
       } else if (allSongsResponse.status === "ERROR") {
         this.toastService.show('An error occured when fetching all songs', "DANGER");
       }
+      this.isLoading = false;
     });
   }
 
